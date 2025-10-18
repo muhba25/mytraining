@@ -484,4 +484,21 @@ Master_SSL_Verify_Server_Cert: No
 
 ```
 
+On Slave : Insert Data on Users Table
+On Master : Check whether the data in the Users Table has been replicated  
+```
+mysql> INSERT INTO db_test1.users VALUES (NULL, 'Andy', 'Andy@example.com', '2025-10-18');
+Query OK, 1 row affected (0.00 sec)
+
+mysql> select * from db_test1.users;
++----+----------+----------------------+-------------------+
+| id | name     | email                | registration_date |
++----+----------+----------------------+-------------------+
+|  1 | John Doe | john.doe@example.com | 2025-10-18        |
+|  2 | Andy     | Andy@example.com     | 2025-10-18        |
++----+----------+----------------------+-------------------+
+2 rows in set (0.00 sec)
+
+```
+
 ## 2. Pengenalan MySQL 9 sebagai inovasi rilis dalam pengembangan AI
