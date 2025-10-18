@@ -484,7 +484,7 @@ Master_SSL_Verify_Server_Cert: No
 
 ```
 
-On Slave : Insert Data on Users Table--
+On Slave : Insert Data on Users Table\
 On Master : Check whether the data in the Users Table has been replicated  
 ```
 mysql> INSERT INTO db_test1.users VALUES (NULL, 'Andy', 'Andy@example.com', '2025-10-18');
